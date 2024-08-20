@@ -5,6 +5,7 @@ using BookStore.Repository.Interface;
 using BookStore.Service.Implementation;
 using BookStore.Service.Interface;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,11 @@ builder.Services.AddDefaultIdentity<BookStoreApplicationUser>(options => options
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+
 builder.Services.AddTransient<IBookService, BookService>();
+
+builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 
 builder.Services.AddControllersWithViews();
 
@@ -51,3 +56,9 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+// Configure DbContext with specified migrations assembly
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        b => b.MigrationsAssembly("BookStore.Repository"))); // Specify the migrations assembl

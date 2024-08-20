@@ -12,15 +12,17 @@ namespace BookStore.Service.Implementation
     public class BookService : IBookService
     {
         private readonly IRepository<Book> _bookRepository;
+        private readonly IUserRepository _userRepository;
     
-        public BookService(IRepository<Book> BookRepository)
+        public BookService(IRepository<Book> BookRepository, IUserRepository userRepository)
         {
             _bookRepository = BookRepository;
-           
+            _userRepository = userRepository;
         }
 
-        public Book CreateNewBook(Book book)
+        public Book CreateNewBook(string userId, Book book)
         {
+            var createdBy = _userRepository.Get(userId);
             return _bookRepository.Insert(book);
         }
 

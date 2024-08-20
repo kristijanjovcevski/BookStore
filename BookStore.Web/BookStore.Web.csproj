@@ -21,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WebApplication2\BookStore.Domain\BookStore.Domain.csproj" />
-    <ProjectReference Include="..\..\WebApplication2\BookStore.Repository\BookStore.Repository.csproj" />
-    <ProjectReference Include="..\..\WebApplication2\BookStore.Service\BookStore.Service.csproj" />
+    <ProjectReference Include="..\..\BookStore\BookStore.Domain\BookStore.Domain.csproj" />
+    <ProjectReference Include="..\..\BookStore\BookStore.Repository\BookStore.Repository.csproj" />
+    <ProjectReference Include="..\..\BookStore\BookStore.Service\BookStore.Service.csproj" />
   </ItemGroup>
 
 </Project>

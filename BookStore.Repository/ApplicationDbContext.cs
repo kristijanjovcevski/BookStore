@@ -24,6 +24,10 @@ namespace BookStore.Repository
         {
 
         }
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            // Additional configuration if needed
+        }
     }
 }

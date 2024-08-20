@@ -1,65 +1,47 @@
-﻿@model IEnumerable<BookStore.Domain.Domain.Book>
+﻿@model List<BookStore.Domain.Domain.Book>
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-success">Create New Book</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ISBN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AuthorFullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PublisherName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PublishedDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ISBN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AuthorFullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublisherName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublishedDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container">
+    @for(int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+
+        if(i%3 == 0)
+        {
+           @: <div class="row"> 
+        }
+
+        <div class="col-md-3 m-4">
+            <div class="card" style="width: 18rem; height:35rem;"> 
+                <img class="card-img-top" src="@item.BookImage" alt="Image for the book!" style="height:50%; font-weight:bold" />
+                <div class="card-body">
+                    <h3 class="card-title" style="text-align:center">@item.Title</h3>
+                    <p class="card-text" style="text-align:center">@item.AuthorFullName</p>
+                    <p class="card-text" style="text-align:center">@item.PublisherName</p>
+                    <p class="card-text" style="text-align:center">@item.Price DEN</p>
+                    <p class="card-text" style="text-align:center">@item.PublishedDate</p>
+                </div>
+                <div class="card-footer">
+                    <a href="Books/Edit/@item.Id" class="btn btn-info">Edit</a> 
+                    <a href="Books/Delete/@item.Id" class="btn btn-danger">Delete</a>
+                    <a href="Books/AddBookToCart/@item.Id" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+
+        </div>
+
+        if(i%3 == 2)
+        {
+            @: </div>
+        }
+    }
+</div>

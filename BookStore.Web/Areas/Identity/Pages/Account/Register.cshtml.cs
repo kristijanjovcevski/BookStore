@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using BookStore.Domain.Domain;
 using BookStore.Domain.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -129,6 +130,10 @@ namespace BookStore.Web.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.UserCart = new ShoppingCart();
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
+                user.Address = Input.Address;
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

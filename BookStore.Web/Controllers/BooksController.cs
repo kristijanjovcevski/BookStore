@@ -9,6 +9,8 @@ using BookStore.Domain.Domain;
 using BookStore.Repository;
 using BookStore.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using BookStore.Domain.DTO;
 
 namespace BookStore.Web.Controllers
 {
@@ -16,20 +18,21 @@ namespace BookStore.Web.Controllers
     {
         private readonly IBookService _bookService;
 
-        //private readonly IShoppingCartService _shoppingCartService; - shopping cart service to be implemented
+        private readonly IShoppingCartService _shoppingCartService; 
         
         
 
-        public BooksController(IBookService bookService)
+        public BooksController(IBookService bookService, IShoppingCartService shoppingCartService)
         {
             this._bookService = bookService;
+            this._shoppingCartService = shoppingCartService;
         }
 
 
         // GET: Books
         public IActionResult Index()
         {
-            return View(_bookService.GetBooks());
+           return View(_bookService.GetBooks());
         }
 
         // GET: Books/Details/5
@@ -63,13 +66,14 @@ namespace BookStore.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public IActionResult Create([Bind("Title,ISBN,AuthorFullName,PublisherName,Price,PublishedDate,Id")] Book book)
+        public IActionResult Create([Bind("Title,ISBN,BookImage,AuthorFullName,PublisherName,Price,PublishedDate,Id")] Book book)
         {
             if (ModelState.IsValid)
             {
 
+                var loggedInUser = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "";
                 book.Id = Guid.NewGuid();
-                _bookService.CreateNewBook(book);
+                _bookService.CreateNewBook(loggedInUser, book);
                 
                 return RedirectToAction(nameof(Index));
             }
@@ -101,7 +105,7 @@ namespace BookStore.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public IActionResult Edit(Guid id, [Bind("Title,ISBN,AuthorFullName,PublisherName,Price,PublishedDate,Id")] Book book)
+        public IActionResult Edit(Guid id, [Bind("Title,ISBN,BookImage,AuthorFullName,PublisherName,Price,PublishedDate,Id")] Book book)
         {
             if (id != book.Id)
             {
@@ -162,6 +166,31 @@ namespace BookStore.Web.Controllers
             if (book != null)
                 return true;
             return false;
+        }
+
+        public IActionResult AddBookToCart(Guid id)
+        {
+            var result = _shoppingCartService.getBookInfo(id);
+            if (result != null)
+            {
+                return View(result);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddBookToCart(AddToCartDTO model)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = _shoppingCartService.AddBookToShoppingCart(userId, model);
+            if (result != null)
+            {
+                return RedirectToAction("Index", "ShoppingCarts");
+            }
+            else
+            {
+                return View(model);
+            }
         }
     }
 }

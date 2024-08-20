@@ -12,7 +12,7 @@ namespace BookStore.Service.Interface
 
         List<Book> GetBooks();
         Book GetBookById(Guid? id);
-        Book CreateNewBook(Book Book);
+        Book CreateNewBook(string userId, Book Book);
         Book UpdateBook(Book Book);
         Book DeleteBook(Guid id);
         

@@ -11,6 +11,9 @@ namespace BookStore.Domain.Domain
         public string ISBN { get; set; }
 
         [Required]
+        public string BookImage { get; set; }
+
+        [Required]
         public string AuthorFullName { get; set; }
 
 
