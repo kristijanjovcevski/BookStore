@@ -2378,6 +2378,23 @@
           "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "Stripe.net/45.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CodeDom/5.0.0": {
         "type": "package",
         "compile": {
@@ -7262,6 +7279,30 @@
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     },
+    "Stripe.net/45.9.0": {
+      "sha512": "U4XFCub4GXoOy2U9MVY+gypI6blH5I5WBk0f6t5JXumM8jxxsotMjX2UpmtDX+5ZXaPhc0MW21YJgOshBsM9og==",
+      "type": "package",
+      "path": "stripe.net/45.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.xml",
+        "lib/net5.0/Stripe.net.dll",
+        "lib/net5.0/Stripe.net.xml",
+        "lib/net6.0/Stripe.net.dll",
+        "lib/net6.0/Stripe.net.xml",
+        "lib/netcoreapp3.1/Stripe.net.dll",
+        "lib/netcoreapp3.1/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.45.9.0.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
     "System.CodeDom/5.0.0": {
       "sha512": "JPJArwA1kdj8qDAkY2XGjSWoYnqiM7q/3yRNkt6n28Mnn95MuEGkZXUbPBf7qc3IjwrGY5ttQon7yqHZyQJmOQ==",
       "type": "package",
@@ -8671,23 +8712,29 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.8",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.4"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.4",
+      "Stripe.net >= 45.9.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vladi\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrej\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\fakultet\\IS\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
       "projectName": "BookStore.Web",
-      "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
-      "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-      "outputPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Web\\obj\\",
+      "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
+      "packagesPath": "C:\\Users\\Andrej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Web\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrej\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8695,21 +8742,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\fakultet\\IS\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-              "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+            "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
             },
-            "D:\\fakultet\\IS\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
-              "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
+            "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
             },
-            "D:\\fakultet\\IS\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {
-              "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Service\\BookStore.Service.csproj"
+            "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {
+              "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Service\\BookStore.Service.csproj"
             }
           }
         }
@@ -8758,6 +8804,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.4, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[45.9.0, )"
           }
         },
         "imports": [
@@ -8779,7 +8829,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

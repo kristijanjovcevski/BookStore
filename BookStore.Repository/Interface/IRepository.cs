@@ -9,7 +9,7 @@ namespace BookStore.Repository.Interface
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        IEnumerable<T> GetAll();
+        IQueryable<T> GetAll();
         T Get(Guid? id);
         T Insert(T entity);
         List<T> InsertMany(List<T> entities);

@@ -119,12 +119,16 @@ namespace BookStore.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("UserId")
+                    b.Property<string>("OwnerId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("userId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("Order");
                 });
@@ -365,7 +369,7 @@ namespace BookStore.Repository.Migrations
                         .HasForeignKey("BookId");
 
                     b.HasOne("BookStore.Domain.Domain.Order", "Order")
-                        .WithMany("BookInOrders")
+                        .WithMany("BooksInOrder")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -394,11 +398,11 @@ namespace BookStore.Repository.Migrations
 
             modelBuilder.Entity("BookStore.Domain.Domain.Order", b =>
                 {
-                    b.HasOne("BookStore.Domain.Identity.BookStoreApplicationUser", "User")
+                    b.HasOne("BookStore.Domain.Identity.BookStoreApplicationUser", "Owner")
                         .WithMany("Order")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("OwnerId");
 
-                    b.Navigation("User");
+                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.ShoppingCart", b =>
@@ -470,7 +474,7 @@ namespace BookStore.Repository.Migrations
 
             modelBuilder.Entity("BookStore.Domain.Domain.Order", b =>
                 {
-                    b.Navigation("BookInOrders");
+                    b.Navigation("BooksInOrder");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.ShoppingCart", b =>

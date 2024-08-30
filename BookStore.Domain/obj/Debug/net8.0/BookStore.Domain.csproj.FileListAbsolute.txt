@@ -36,3 +36,16 @@ D:\fakultet\IS\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.dll
 D:\fakultet\IS\BookStore\BookStore.Domain\obj\Debug\net8.0\refint\BookStore.Domain.dll
 D:\fakultet\IS\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.pdb
 D:\fakultet\IS\BookStore\BookStore.Domain\obj\Debug\net8.0\ref\BookStore.Domain.dll
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\bin\Debug\net8.0\BookStore.Domain.deps.json
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\bin\Debug\net8.0\BookStore.Domain.dll
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\bin\Debug\net8.0\BookStore.Domain.pdb
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.csproj.AssemblyReference.cache
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.AssemblyInfoInputs.cache
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.AssemblyInfo.cs
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.sourcelink.json
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.dll
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\refint\BookStore.Domain.dll
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\BookStore.Domain.pdb
+C:\Users\Andrej\Desktop\ProektSoJole\BookStore\BookStore.Domain\obj\Debug\net8.0\ref\BookStore.Domain.dll
