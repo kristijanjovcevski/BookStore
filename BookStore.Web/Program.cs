@@ -27,6 +27,7 @@ builder.Services.AddTransient<IBookService, BookService>();
 
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

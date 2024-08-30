@@ -2960,19 +2960,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vladi\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrej\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\fakultet\\IS\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+      "projectUniqueName": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
       "projectName": "BookStore.Service",
-      "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
-      "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-      "outputPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Service\\obj\\",
+      "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+      "packagesPath": "C:\\Users\\Andrej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Service\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrej\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2980,18 +2985,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\fakultet\\IS\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-              "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+            "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
             },
-            "D:\\fakultet\\IS\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
-              "projectPath": "D:\\fakultet\\IS\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
+            "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\Andrej\\Desktop\\ProektSoJole\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
             }
           }
         }
@@ -3026,7 +3030,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

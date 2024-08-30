@@ -9,7 +9,8 @@ namespace BookStore.Domain.Domain
 {
     public class Order : BaseEntity
     {
-        public BookStoreApplicationUser? User { get; set; }
-        public virtual ICollection<BookInOrder>? BookInOrders { get; set; }
+        public string userId { get; set; }
+        public BookStoreApplicationUser Owner { get; set; }
+        public IEnumerable<BookInOrder> BooksInOrder { get; set; }
     }
 }

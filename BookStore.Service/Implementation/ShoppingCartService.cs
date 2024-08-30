@@ -3,12 +3,14 @@ using BookStore.Domain.DTO;
 using BookStore.Repository.Interface;
 using BookStore.Service.Interface;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace BookStore.Service.Implementation
 {
     public class ShoppingCartService : IShoppingCartService
@@ -104,6 +106,67 @@ namespace BookStore.Service.Implementation
                 TotalPrice = 0.0,
                 AllBooks = new List<BookInShoppingCart>()
             };
+        }
+        public bool order(string userId)
+        {
+            if (userId != null)
+            {
+                var loggedInUser = _userRepository.Get(userId);
+
+                var userShoppingCart = loggedInUser.UserCart;
+
+                Order order = new Order
+                {
+                    Id = Guid.NewGuid(),
+                    userId = userId,
+                    Owner = loggedInUser
+                };
+
+                _orderRepository.Insert(order);
+
+                List<BookInOrder> productInOrder = new List<BookInOrder>();
+
+                var lista = userShoppingCart.ProductInShoppingCarts.Select(
+                    x => new BookInOrder
+                    {
+                        Id = Guid.NewGuid(),
+                        ProductId = x.Book.Id,
+                        Book = x.Book,
+                        OrderId = order.Id,
+                        Order = order,
+                        Quantity = x.Quantity
+                    }
+                    ).ToList();
+
+
+                StringBuilder sb = new StringBuilder();
+
+                var totalPrice = 0.0;
+
+                sb.AppendLine("Your order is completed. The order conatins: ");
+
+                for (int i = 1; i <= lista.Count(); i++)
+                {
+                    var currentItem = lista[i - 1];
+                    totalPrice += currentItem.Quantity * currentItem.Book.Price;
+                    sb.AppendLine(i.ToString() + ". " + currentItem.Book.Title + " with quantity of: " + currentItem.Quantity + " and price of: $" + currentItem.Book.Price);
+                }
+
+                sb.AppendLine("Total price for your order: " + totalPrice.ToString());
+
+                productInOrder.AddRange(lista);
+
+                foreach (var product in productInOrder)
+                {
+                    _bookInOrderRepository.Insert(product);
+                }
+
+                loggedInUser.UserCart.ProductInShoppingCarts.Clear();
+                _userRepository.Update(loggedInUser);
+
+                return true;
+            }
+            return false;
         }
     }
 }
