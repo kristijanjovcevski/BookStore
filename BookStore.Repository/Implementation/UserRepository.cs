@@ -31,8 +31,8 @@ namespace BookStore.Repository.Implementation
             var strGuid = id.ToString();
             return entities
                 .Include(z => z.UserCart)
-                .Include("UserCart.ProductInShoppingCarts")
-                .Include("UserCart.ProductInShoppingCarts.Book")
+                .Include("UserCart.BookInShoppingCarts")
+                .Include("UserCart.BookInShoppingCarts.Book")
                 .First(s => s.Id == strGuid);
         }
 

@@ -21,14 +21,19 @@ builder.Services.AddDefaultIdentity<BookStoreApplicationUser>(options => options
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+builder.Services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 builder.Services.AddTransient<IBookService, BookService>();
 
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 
+builder.Services.AddTransient<IOrderService, OrderService>();
 
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;
 
 var app = builder.Build();
 

@@ -39,10 +39,10 @@ namespace BookStore.Service.Implementation
                 var selectedBook = _bookRepository.Get(model.SelectedBookId);
                 if (selectedBook != null && userCart != null)
                 {
-                    userCart?.ProductInShoppingCarts?.Add(new BookInShoppingCart
+                    userCart?.BookInShoppingCarts?.Add(new BookInShoppingCart
                     {
                         Book = selectedBook,
-                        ProductId = selectedBook.Id,
+                        BookId = selectedBook.Id,
                         ShoppingCart = userCart,
                         ShoppingCartId = userCart.Id,
                         Quantity = model.Quantity,
@@ -58,8 +58,8 @@ namespace BookStore.Service.Implementation
             if (userId != null)
             {
                 var loggedInUser = _userRepository.Get(userId);
-                var book_to_delete = loggedInUser?.UserCart.ProductInShoppingCarts.First(x => x.ProductId == Id);
-                loggedInUser?.UserCart?.ProductInShoppingCarts?.Remove(book_to_delete);
+                var book_to_delete = loggedInUser?.UserCart?.BookInShoppingCarts?.First(x => x.BookId == Id);
+                loggedInUser?.UserCart?.BookInShoppingCarts?.Remove(book_to_delete);
                 _shoppingCartRepository.Update(loggedInUser.UserCart);
                 return true;    
                 
@@ -88,7 +88,7 @@ namespace BookStore.Service.Implementation
             if (userId != null && !userId.IsNullOrEmpty()) 
             {
                 var loggedInUser = _userRepository.Get(userId);
-                var allBooks = loggedInUser?.UserCart?.ProductInShoppingCarts?.ToList();
+                var allBooks = loggedInUser?.UserCart?.BookInShoppingCarts?.ToList();
                 var totalPrice = 0.0;
                 foreach(var item in allBooks)
                 {
@@ -118,19 +118,19 @@ namespace BookStore.Service.Implementation
                 Order order = new Order
                 {
                     Id = Guid.NewGuid(),
-                    userId = userId,
+                    OwnerId = userId,
                     Owner = loggedInUser
                 };
 
                 _orderRepository.Insert(order);
 
-                List<BookInOrder> productInOrder = new List<BookInOrder>();
+                List<BookInOrder> bookInOrder = new List<BookInOrder>();
 
-                var lista = userShoppingCart.ProductInShoppingCarts.Select(
+                var lista = userShoppingCart?.BookInShoppingCarts?.Select(
                     x => new BookInOrder
                     {
                         Id = Guid.NewGuid(),
-                        ProductId = x.Book.Id,
+                        BookId = x.Book.Id,
                         Book = x.Book,
                         OrderId = order.Id,
                         Order = order,
@@ -154,14 +154,14 @@ namespace BookStore.Service.Implementation
 
                 sb.AppendLine("Total price for your order: " + totalPrice.ToString());
 
-                productInOrder.AddRange(lista);
+                bookInOrder.AddRange(lista);
 
-                foreach (var product in productInOrder)
+                foreach (var book in bookInOrder)
                 {
-                    _bookInOrderRepository.Insert(product);
+                    _bookInOrderRepository.Insert(book);
                 }
 
-                loggedInUser.UserCart.ProductInShoppingCarts.Clear();
+                loggedInUser?.UserCart?.BookInShoppingCarts?.Clear();
                 _userRepository.Update(loggedInUser);
 
                 return true;

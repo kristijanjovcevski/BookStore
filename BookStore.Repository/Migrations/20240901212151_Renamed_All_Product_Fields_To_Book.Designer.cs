@@ -4,6 +4,7 @@ using BookStore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240901212151_Renamed_All_Product_Fields_To_Book")]
+    partial class Renamed_All_Product_Fields_To_Book
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,7 +59,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books", (string)null);
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.BookInOrder", b =>
@@ -80,7 +83,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("BookInOrder", (string)null);
+                    b.ToTable("BookInOrder");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.BookInShoppingCart", b =>
@@ -104,7 +107,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasIndex("ShoppingCartId");
 
-                    b.ToTable("BookInShoppingCarts", (string)null);
+                    b.ToTable("BookInShoppingCarts");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.Order", b =>
@@ -121,7 +124,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Order", (string)null);
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.ShoppingCart", b =>
@@ -139,7 +142,7 @@ namespace BookStore.Repository.Migrations
                         .IsUnique()
                         .HasFilter("[OwnerId] IS NOT NULL");
 
-                    b.ToTable("ShoppingCarts", (string)null);
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Identity.BookStoreApplicationUser", b =>

@@ -9,8 +9,8 @@ namespace BookStore.Domain.Domain
 {
     public class Order : BaseEntity
     {
-        public string userId { get; set; }
+        public string OwnerId { get; set; }
         public BookStoreApplicationUser Owner { get; set; }
-        public IEnumerable<BookInOrder> BooksInOrder { get; set; }
+        public ICollection<BookInOrder> BooksInOrder { get; set; }
     }
 }

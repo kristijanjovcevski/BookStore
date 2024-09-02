@@ -27,14 +27,14 @@ namespace BookStore.Web.Controllers
         }
 
         // GET: ShoppingCarts
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)??null;
             return View(_shoppingCartService.getShoppingCartDetails(userId??""));
         }
 
         // GET: ShoppingCarts/Delete/5
-        public async Task<IActionResult> DeleteBookFromShoppingCart(Guid? Id)
+        public IActionResult DeleteBookFromShoppingCart(Guid? Id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? null;
             var result = _shoppingCartService.deleteFromShoppingCart(userId, Id);

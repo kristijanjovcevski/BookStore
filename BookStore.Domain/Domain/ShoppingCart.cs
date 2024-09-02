@@ -12,7 +12,7 @@ namespace BookStore.Domain.Domain
 
         public string? OwnerId { get; set; }
         public BookStoreApplicationUser? Owner { get; set; }
-        public virtual ICollection<BookInShoppingCart>? ProductInShoppingCarts { get; set; }
+        public virtual ICollection<BookInShoppingCart>? BookInShoppingCarts { get; set; }
 
     }
 }

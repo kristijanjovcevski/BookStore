@@ -8,7 +8,7 @@ namespace BookStore.Domain.Domain
 {
     public class BookInShoppingCart : BaseEntity
     {
-        public Guid ProductId { get; set; }
+        public Guid BookId { get; set; }
         public Guid ShoppingCartId { get; set; }
         public Book? Book { get; set; }
         public ShoppingCart? ShoppingCart { get; set; }
