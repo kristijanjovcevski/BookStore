@@ -17,115 +17,115 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookStore.Web
 build_property.RootNamespace = BookStore.Web
-build_property.ProjectDir = C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\
+build_property.ProjectDir = C:\Users\Andrej\Desktop\BookStore-master\BookStore.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web
+build_property.MSBuildProjectDirectory = C:\Users\Andrej\Desktop\BookStore-master\BookStore.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Books/AddBookToCart.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Books/AddBookToCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQWRkQm9va1RvQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Books/Create.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Books/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Books/Delete.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Books/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Books/Details.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Books/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Books/Edit.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Books/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Books/Index.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Books/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Home/Index.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Home/Privacy.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Shared/Error.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/Create.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/Delete.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/Details.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/Edit.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/Index.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/NotsuccessPayment.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/NotsuccessPayment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xOb3RzdWNjZXNzUGF5bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/ShoppingCarts/SuccessPayment.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/ShoppingCarts/SuccessPayment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0c1xTdWNjZXNzUGF5bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/_ViewImports.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/_ViewStart.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/UserWin/Documents/ProjectFINKI/ProjectIS/BookStoreApplication/BookStore.Web/Views/Shared/_Layout.cshtml]
+[C:/Users/Andrej/Desktop/BookStore-master/BookStore.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rx46zcafse

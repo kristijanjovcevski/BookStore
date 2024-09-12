@@ -1,4 +1,6 @@
 ﻿using BookStore.Domain.Domain;
+using BookStore.Domain.DTO;
+using BookStore.Domain.Identity;
 using BookStore.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -11,10 +13,14 @@ namespace BookStore.Web.Controllers.API
     public class AdminController : ControllerBase
     {
         private readonly IOrderService _orderService;
+        private readonly UserManager<BookStoreApplicationUser> _userManager;
 
-        public AdminController(IOrderService orderService)
+
+        public AdminController(IOrderService orderService, UserManager<BookStoreApplicationUser> userManager)
         {
             _orderService = orderService;
+            _userManager = userManager;
+
         }
 
         [HttpGet("[action]")]
@@ -28,5 +34,35 @@ namespace BookStore.Web.Controllers.API
         {
             return _orderService.GetDetailsForOrder(model);
         }
+        [HttpPost("[action]")]
+        public bool ImportAllUsers([FromBody] List<UserRegistrationDto> model)
+        {
+            bool status = true;
+            foreach (var item in model)
+            {
+                var userCheck = _userManager.FindByEmailAsync(item.Email).Result;
+
+                if (userCheck == null)
+                {
+                    var user = new BookStoreApplicationUser
+                    {
+                        UserName = item.Email,
+                        NormalizedUserName = item.Email,
+                        Email = item.Email,
+                        EmailConfirmed = true
+                    };
+
+                    var result = _userManager.CreateAsync(user, item.Password).Result;
+                    status = status && result.Succeeded;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return status;
+        }
+
     }
 }
+
