@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookStore.Service
-build_property.ProjectDir = C:\Users\Andrej\Desktop\BookStore-master\BookStore.Service\
+build_property.ProjectDir = C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Service\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

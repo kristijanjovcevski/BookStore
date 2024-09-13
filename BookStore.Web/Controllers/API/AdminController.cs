@@ -49,7 +49,8 @@ namespace BookStore.Web.Controllers.API
                         UserName = item.Email,
                         NormalizedUserName = item.Email,
                         Email = item.Email,
-                        EmailConfirmed = true
+                        EmailConfirmed = true,
+                        UserCart = new ShoppingCart()
                     };
 
                     var result = _userManager.CreateAsync(user, item.Password).Result;
