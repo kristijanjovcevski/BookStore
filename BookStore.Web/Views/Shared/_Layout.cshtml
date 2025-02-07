@@ -31,6 +31,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ShoppingCarts" asp-action="Index">ShoppingCart</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Partners Store
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Games" asp-action="Index">Games </a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Developers" asp-action="Index">Developers </a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

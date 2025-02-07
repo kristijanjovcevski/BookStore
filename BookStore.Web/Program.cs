@@ -31,6 +31,10 @@ builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 
 builder.Services.AddTransient<IOrderService, OrderService>();
 
+builder.Services.AddTransient<IGameService, GameService>();
+
+builder.Services.AddTransient<IDeveloperService, DeveloperService>();
+
 
 builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;

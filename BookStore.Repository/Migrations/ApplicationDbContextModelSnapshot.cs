@@ -56,7 +56,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books", (string)null);
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.BookInOrder", b =>
@@ -80,7 +80,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("BookInOrder", (string)null);
+                    b.ToTable("BookInOrder");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.BookInShoppingCart", b =>
@@ -104,7 +104,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasIndex("ShoppingCartId");
 
-                    b.ToTable("BookInShoppingCarts", (string)null);
+                    b.ToTable("BookInShoppingCarts");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.Order", b =>
@@ -121,7 +121,7 @@ namespace BookStore.Repository.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Order", (string)null);
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Domain.ShoppingCart", b =>
@@ -139,7 +139,7 @@ namespace BookStore.Repository.Migrations
                         .IsUnique()
                         .HasFilter("[OwnerId] IS NOT NULL");
 
-                    b.ToTable("ShoppingCarts", (string)null);
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Identity.BookStoreApplicationUser", b =>
@@ -214,6 +214,60 @@ namespace BookStore.Repository.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("BookStore.Domain.PartnerDomain.Developer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DevDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DevName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("YearFormed")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Developers");
+                });
+
+            modelBuilder.Entity("BookStore.Domain.PartnerDomain.Game", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateReleased")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeveloperId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("GameDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GameImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GameTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DeveloperId");
+
+                    b.ToTable("Games");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -411,6 +465,15 @@ namespace BookStore.Repository.Migrations
                     b.Navigation("Owner");
                 });
 
+            modelBuilder.Entity("BookStore.Domain.PartnerDomain.Game", b =>
+                {
+                    b.HasOne("BookStore.Domain.PartnerDomain.Developer", "Developer")
+                        .WithMany("Games")
+                        .HasForeignKey("DeveloperId");
+
+                    b.Navigation("Developer");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -484,6 +547,11 @@ namespace BookStore.Repository.Migrations
                     b.Navigation("Order");
 
                     b.Navigation("UserCart");
+                });
+
+            modelBuilder.Entity("BookStore.Domain.PartnerDomain.Developer", b =>
+                {
+                    b.Navigation("Games");
                 });
 #pragma warning restore 612, 618
         }

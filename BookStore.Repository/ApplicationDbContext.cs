@@ -1,5 +1,6 @@
 ﻿using BookStore.Domain.Domain;
 using BookStore.Domain.Identity;
+using BookStore.Domain.PartnerDomain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,6 +18,8 @@ namespace BookStore.Repository
         public virtual DbSet<BookInShoppingCart> BookInShoppingCarts { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<BookInOrder> BookInOrder { get; set; }
+        public virtual DbSet<Developer> Developers { get; set; }
+        public virtual DbSet<Game> Games { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
