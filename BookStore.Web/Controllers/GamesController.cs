@@ -27,7 +27,6 @@ namespace BookStore.Web.Controllers
         // GET: Games
         public IActionResult Index()
         {
-            ;
             return View(gameService.GetGames());
         }
 
@@ -55,7 +54,7 @@ namespace BookStore.Web.Controllers
         // GET: Games/Create
         public IActionResult Create()
         {
-            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "Id");
+            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "DevName");
             return View();
         }
 
@@ -72,7 +71,7 @@ namespace BookStore.Web.Controllers
                 gameService.CreateNewGame(game);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "Id", game.DeveloperId);
+            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "DevName", game.DeveloperId);
             return View(game);
         }
 
@@ -89,7 +88,7 @@ namespace BookStore.Web.Controllers
             {
                 return NotFound();
             }
-            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "Id", game.DeveloperId);
+            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "DevName", game.DeveloperId);
             return View(game);
         }
 
@@ -124,7 +123,7 @@ namespace BookStore.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "Id", game.DeveloperId);
+            ViewData["DeveloperId"] = new SelectList(developerService.GetDevelopers(), "Id", "DevName", game.DeveloperId);
             return View(game);
         }
 

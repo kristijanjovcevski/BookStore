@@ -1,9 +1,11 @@
 ﻿using BookStore.Domain.Domain;
+using BookStore.Domain.PartnerDomain;
 using BookStore.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,12 +23,25 @@ namespace BookStore.Repository.Implementation
         }
         public IQueryable<T> GetAll()
         {
-            return entities.AsQueryable();
+            if (typeof(T).IsAssignableFrom(typeof(Game)))
+            {
+                return entities
+                    .Include("Developer")
+                    .AsQueryable();
+            }
+                return entities.AsQueryable();
         }
 
         public T Get(Guid? id)
         {
-            return entities.First(s => s.Id == id);
+            if (typeof(T) == typeof(Game))
+            {
+                return entities
+                    .Include("Developer")
+                    .SingleOrDefault(s => s.Id == id);
+            }
+
+            return entities.SingleOrDefault(s => s.Id == id);
         }
         public T Insert(T entity)
         {

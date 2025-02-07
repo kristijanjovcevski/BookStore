@@ -1581,7 +1581,6 @@ C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore
 C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -2377,3 +2376,12 @@ C:\Users\Andrej\Desktop\Book Store\BookStore.Web\bin\Debug\net8.0\Microsoft.Exte
 C:\Users\Andrej\Desktop\Book Store\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Andrej\Desktop\Book Store\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\Andrej\Desktop\Book Store\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\BookStore.Web.staticwebassets.endpoints.json
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\obj\Debug\net8.0\staticwebassets\msbuild.BookStore.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\UserWin\Documents\ProjectFINKI\ProjectIS\BookStoreApplication\BookStore.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
