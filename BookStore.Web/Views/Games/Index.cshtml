@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BookStore.Domain.PartnerDomain.Game>
+﻿@model List<BookStore.Domain.PartnerDomain.Game>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,9 +7,46 @@
 
 <h1>Index</h1>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New game</a>
 </p>
-<table class="table">
+
+<div class="container">
+    @for(int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+
+        if(i%3 == 0)
+        {
+           @: <div class="row"> 
+        }
+
+        <div class="col-md-3 m-4">
+            <div class="card" style="width: 18rem; height:50rem;"> 
+                <img class="card-img-top" src="@item.GameImage" alt="Image for the book!" style="height:40%; font-weight:bold" />
+                <div class="card-body">
+                    <h3 class="card-title" style="text-align:center">@item.GameTitle</h3>
+                    <p class="card-text" style="text-align:center">Description: @item.GameDesc</p>
+                    <p class="card-text" style="text-align:center">Released:  @item.DateReleased</p>
+                    <p class="card-text" style="text-align:center">Rating: @item.Rating</p>
+                    <p class="card-text" style="text-align:center">Price: @item.Price $</p>
+                    <p class="card-text" style="text-align:center">Developer: @item?.Developer?.DevName</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a class="btn btn-primary px-3" asp-action="Edit" asp-route-id="@item?.Id">Edit</a>
+                    <a class="btn btn-info px-3" asp-action="Details" asp-route-id="@item?.Id">Details</a>
+                    <a class="btn btn-danger px-3" asp-action="Delete" asp-route-id="@item?.Id">Delete</a>
+                </div>
+            </div>
+
+        </div>
+
+        if(i%3 == 2)
+        {
+            @: </div>
+        }
+    }
+</div>
+@* <table class="table">
     <thead>
         <tr>
             <th>
@@ -71,4 +108,4 @@
         </tr>
 }
     </tbody>
-</table>
+</table> *@
